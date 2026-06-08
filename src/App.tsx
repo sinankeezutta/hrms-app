@@ -5,6 +5,7 @@ import Login from './pages/auth/Login'
 import Dashboard from './pages/dashboard/Dashboard'
 import Employees from './pages/employees/Employees'
 import Attendance from './pages/attendance/Attendance'
+import Leaves from './pages/leaves/Leaves'
 
 function App() {
   const [session, setSession] = useState<any>(null)
@@ -29,6 +30,7 @@ function App() {
         <Route path="/dashboard" element={session ? <Dashboard /> : <Navigate to="/" />} />
         <Route path="/employees" element={session ? <Employees /> : <Navigate to="/" />} />
         <Route path="/attendance" element={session ? <Attendance /> : <Navigate to="/" />} />
+        <Route path="/leaves" element={session ? <Leaves /> : <Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
   )
