@@ -6,6 +6,7 @@ import Dashboard from './pages/dashboard/Dashboard'
 import Employees from './pages/employees/Employees'
 import Attendance from './pages/attendance/Attendance'
 import Leaves from './pages/leaves/Leaves'
+import Payroll from './pages/payroll/Payroll'
 
 function App() {
   const [session, setSession] = useState<any>(null)
@@ -31,6 +32,7 @@ function App() {
         <Route path="/employees" element={session ? <Employees /> : <Navigate to="/" />} />
         <Route path="/attendance" element={session ? <Attendance /> : <Navigate to="/" />} />
         <Route path="/leaves" element={session ? <Leaves /> : <Navigate to="/" />} />
+        <Route path="/payroll" element={session ? <Payroll /> : <Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
   )
