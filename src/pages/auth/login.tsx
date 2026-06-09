@@ -8,16 +8,16 @@ export default function Login() {
   const [error, setError] = useState('')
 
 const handleLogin = async () => {
-    setLoading(true)
-    setError('')
-    const { data, error } = await supabase.auth.signInWithPassword({ email, password })
-    if (error) {
-      setError(error.message)
-    } else {
-      window.location.href = '/dashboard'
-    }
-    setLoading(false)
+  setLoading(true)
+  setError('')
+  const { error } = await supabase.auth.signInWithPassword({ email, password })
+  if (error) {
+    setError(error.message)
+  } else {
+    window.location.href = '/dashboard'
   }
+  setLoading(false)
+}
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">

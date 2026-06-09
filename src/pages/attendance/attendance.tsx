@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../../lib/supabase'
-import MainLayout from '../../layouts/MainLayout'
+import MainLayout from '../../layouts/Mainlayout'
 
 type AttendanceRecord = {
   id: string

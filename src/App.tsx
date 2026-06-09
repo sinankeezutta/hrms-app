@@ -7,9 +7,10 @@ import Employees from './pages/employees/Employees'
 import Attendance from './pages/attendance/Attendance'
 import Leaves from './pages/leaves/Leaves'
 import Payroll from './pages/payroll/Payroll'
+import { Session } from '@supabase/supabase-js'
 
 function App() {
-  const [session, setSession] = useState<any>(null)
+  const [session, setSession] = useState<Session | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -17,7 +18,7 @@ function App() {
       setSession(session)
       setLoading(false)
     })
-    supabase.auth.onAuthStateChange((_event, session) => {
+    supabase.auth.onAuthStateChange((_event: string, session: Session | null) => {
       setSession(session)
     })
   }, [])
