@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/layouts/mainlayout.tsx","./src/layouts/sidebar.tsx","./src/lib/supabase.ts","./src/pages/attendance/attendance.tsx","./src/pages/auth/login.tsx","./src/pages/dashboard/dashboard.tsx","./src/pages/employees/employees.tsx","./src/pages/leaves/leaves.tsx","./src/pages/payroll/payroll.tsx"],"version":"6.0.3"}

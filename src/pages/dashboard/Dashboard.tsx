@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../../lib/supabase'
-import MainLayout from '../../layouts/Mainlayout'
+import MainLayout from '../../layouts/MainLayout'
 
 export default function Dashboard() {
   const [employeeCount, setEmployeeCount] = useState(0)
